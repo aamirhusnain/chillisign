@@ -45,8 +45,11 @@
       <Hosts>
         <Host xsi:type="MailHost">
 
+          <!-- Specify the runtime for event-based activation. -->
+          <!-- For more information, see https://learn.microsoft.com/office/dev/add-ins/outlook/autolaunch -->
           <Runtimes>
             <Runtime resid="WebViewRuntime.Url">
+              <Override type="javascript" resid="runtimeJs"/>
             </Runtime>
           </Runtimes>
 
@@ -92,6 +95,7 @@
         <bt:Urls>
           <bt:Url id="Commands.Url" DefaultValue="https://aamirhusnain.github.io/chillisign/commands.html"/>
           <bt:Url id="WebViewRuntime.Url" DefaultValue="https://aamirhusnain.github.io/chillisign/commands.html"/>
+          <bt:Url id="runtimeJs" DefaultValue="https://aamirhusnain.github.io/chillisign/event.js"/>
           <bt:Url id="Taskpane.Url" DefaultValue="https://aamirhusnain.github.io/chillisign/taskpane.html"/>
         </bt:Urls>
         <bt:ShortStrings>
